@@ -25,7 +25,6 @@ public class JobAssignmentManeger {
 	Player player3 = players.get(2);
 	Player player4 = players.get(3);
 	
-	System.out.println("");
 	player1.sayJob();
 	player2.sayJob();
 	player3.sayJob();
