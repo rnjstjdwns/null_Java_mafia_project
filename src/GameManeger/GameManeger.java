@@ -400,7 +400,7 @@ public class GameManeger {
                          }
                       }
                  }
-                 if(count == players.size() - 1) {
+                 if(count == players.size() - 1 && players.size() != 0) {
                     System.out.println("\n대사의 교환 능력이 발동됩니다.");
                     int selectCard1= 0;
                     int selectCard2= 0;
