@@ -21,13 +21,16 @@ public class Coup {
                            + targetPlayer.myJob.get(0).jobName + "\n번호를 입력>>");
            }
    }
-      public void coup(Player currentPlayer, Player targetPlayer, int deadCardNum, ArrayList <Player> players) {
+      public void coup(Player currentPlayer, Player targetPlayer, int deadCardNum, ArrayList <Player> players, int cp, int op) {
            if(deadCardNum == 1) {
               System.out.println("\n" + targetPlayer.myJob.get(0).jobName + " 카드를 잃었습니다.");
               targetPlayer.myJob.remove(0);
                if(targetPlayer.myJob.isEmpty() == true) {
                      System.out.println("\n"+targetPlayer.name + "님의 세력이 패배하였습니다."); 
                      players.remove(targetPlayer);
+                     if(cp<op) {
+                        cp--;
+                     }
                   }
            } else if(deadCardNum == 2) {
               System.out.println("\n" + targetPlayer.myJob.get(1).jobName + " 카드를 잃었습니다.");

@@ -16,19 +16,21 @@ public class Mulligan {
        //궁정덱에서 카드 2장을 가져옴.
        currentPlayer.myJob.add(Player.royalCourtDeck.get(6));
        currentPlayer.myJob.add(Player.royalCourtDeck.get(5));
+       System.out.println("궁정덱에서 " + Player.royalCourtDeck.get(6).jobName + "카드를 가져왔습니다.");
+       System.out.println("궁정덱에서 " + Player.royalCourtDeck.get(5).jobName + "카드를 가져왔습니다.");
        Player.royalCourtDeck.remove(6);
        Player.royalCourtDeck.remove(5);
    }
    public void askSelectCardBetweenFour(Player currentPlayer) {
       //4장의 카드중 가져올 카드 2장을 선택.
-      System.out.println("\n궁정덱에서 2장의 카드를 가져왔습니다!\n가져올 2장의 카드를 선택해주세요.\n\n1."
+      System.out.print("\n궁정덱에서 2장의 카드를 가져왔습니다!\n가져올 2장의 카드를 선택해주세요.\n\n1."
                           + currentPlayer.myJob.get(0).jobName + " 2." + currentPlayer.myJob.get(1).jobName
                           + " 3." + currentPlayer.myJob.get(2).jobName + " 4." + currentPlayer.myJob.get(3).jobName
                           + "\n\n카드 번호를 2개 입력해주세요>>");
    }
    public void askSelectCardBetweenThree(Player currentPlayer) {
       //3장의 카드중 가져올 카드 1장을 선택.
-      System.out.println("\n궁정덱에서 2장의 카드를 가져왔습니다!\n가져올 1장의 카드를 선택해주세요.\n\n1."
+      System.out.print("\n궁정덱에서 2장의 카드를 가져왔습니다!\n가져올 1장의 카드를 선택해주세요.\n\n1."
                           + currentPlayer.myJob.get(0).jobName + " 2." + currentPlayer.myJob.get(1).jobName
                           + " 3." + currentPlayer.myJob.get(2).jobName+ "\n\n카드 번호를 1개 입력해주세요>>");
    }
@@ -134,6 +136,8 @@ public class Mulligan {
            currentPlayer.myJob.remove(0);
            Collections.shuffle(Player.royalCourtDeck);
            currentPlayer.myJob.add(Player.royalCourtDeck.get(0));
+           System.out.println("궁정덱에서 " + Player.royalCourtDeck.get(0).jobName + "카드를 가져왔습니다.");
+           Player.royalCourtDeck.remove(0);
 
            System.out.println("\n"+ otherPlayer.name + "님이 도전에 실패했습니다. \n"
                    + "패배의 댓가로 카드를 하나 잃습니다.");
@@ -155,6 +159,8 @@ public class Mulligan {
            currentPlayer.myJob.remove(1);
            Collections.shuffle(Player.royalCourtDeck);
            currentPlayer.myJob.add(Player.royalCourtDeck.get(0));
+           System.out.println("궁정덱에서 " + Player.royalCourtDeck.get(0).jobName + "카드를 가져왔습니다.");
+           Player.royalCourtDeck.remove(0);
 
            System.out.println("\n"+ otherPlayer.name + "님이 도전에 실패했습니다. \n"
                    + "패배의 댓가로 카드를 하나 잃습니다.");
