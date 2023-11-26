@@ -28,12 +28,16 @@ public class GameManeger {
       
       Scanner s = new Scanner(System.in);
       
+      System.out.println("플레이어 1님! 사용할 이름을 입력해주세요");
       Player p1 = new Player(s.nextLine());
       p1.sayName();
+      System.out.println("\n플레이어 2님! 사용할 이름을 입력해주세요");
       Player p2 = new Player(s.nextLine());
       p2.sayName();
+      System.out.println("\n플레이어 3님! 사용할 이름을 입력해주세요");
       Player p3 = new Player(s.nextLine());
       p3.sayName();
+      System.out.println("\n플레이어 4님! 사용할 이름을 입력해주세요");
       Player p4 = new Player(s.nextLine());
       p4.sayName();
       
@@ -243,7 +247,7 @@ public class GameManeger {
                  cp = taxCollection.taxCollection(cp, players, s, count);
                } //세금징수 끝
                
-               //직업 능력 사용 번호가 2번일 때 (교환)
+             //직업 능력 사용 번호가 2번일 때 (교환)
                else if(actionNumber2 == 2) {
                  System.out.println("\n" + players.get(cp).name + "님이 대사의 교환을 선택하셨습니다.");
                  
